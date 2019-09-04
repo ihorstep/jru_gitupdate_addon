@@ -1,0 +1,16 @@
+id: git_update
+type: update    
+name: Update menu
+description: Small addon for updating
+targetNodes:      
+  nodeType: 'docker'
+buttons:      
+  - caption: Update
+    action: updateGit
+    loadingText: Updating...
+    confirmText: Are you sure?
+    successText: Structure has been updated     
+    
+actions:
+  - updateGit:
+      cmd[cp]: sudo -H -u is bash -c /home/is/gitupdate.sh || exit $?
